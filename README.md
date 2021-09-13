@@ -191,6 +191,8 @@
 
 ![image](https://user-images.githubusercontent.com/80744192/121182134-bf4f5480-c89d-11eb-8015-76c4761c8ed6.png)
 
+![헥사고날 아키텍쳐 이미지](https://user-images.githubusercontent.com/88864399/133049472-b3a53e0a-3771-42b6-8760-eac1593f42f6.png)
+
 
   - Chris Richardson, MSA Patterns 참고하여 Inbound adaptor와 Outbound adaptor를 구분함
   - 호출관계에서 PubSub 과 Req/Resp 를 구분함

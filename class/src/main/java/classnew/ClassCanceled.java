@@ -8,6 +8,7 @@ public class ClassCanceled extends AbstractEvent {
 
     public ClassCanceled(){
         super();
+        System.out.println("------Cancel Class Start!!----");
     }
 
     public Long getId() {

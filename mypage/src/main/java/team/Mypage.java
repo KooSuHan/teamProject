@@ -10,7 +10,7 @@ public class Mypage {
         @Id
         @GeneratedValue(strategy=GenerationType.AUTO)
         private Long id;
-        private String classId;
+        private String courseId;
         private String applyId;
         private String studentName;
         private String payStatus;
@@ -29,12 +29,12 @@ public class Mypage {
         public void setId(Long id) {
             this.id = id;
         }
-        public String getClassId() {
-            return classId;
+        public String getCourseId() {
+            return courseId ;
         }
 
-        public void setClassId(String classId) {
-            this.classId = classId;
+        public void setCourseId(String courseId ) {
+            this.courseId  = courseId ;
         }
         public String getApplyId() {
             return applyId;

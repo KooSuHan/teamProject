@@ -22,28 +22,33 @@ public class Payment {
 
     @PostPersist
     public void onPostPersist() {
-
+        /*
         if (this.getPayStaus().equals("PayApprove")) {
 
             PaymentAppoved paymentAppoved = new PaymentAppoved();
-            System.out.println(paymentAppoved.getPayStaus());
+            //System.out.println(paymentAppoved.getPayStaus());
             BeanUtils.copyProperties(this, paymentAppoved);
-            System.out.println(paymentAppoved.getPayStaus());
+            //System.out.println(paymentAppoved.getPayStaus());
             paymentAppoved.setPayStaus("PaymentAprroved");
             System.out.println(paymentAppoved.getPayStaus());
             paymentAppoved.publishAfterCommit();
             System.out.println(paymentAppoved.getPayStaus());
         }
+        */
+        PaymentAppoved paymentAppoved = new PaymentAppoved();
+        BeanUtils.copyProperties(this, paymentAppoved);
+        paymentAppoved.setPayStaus("PaymentAprroved");
+        paymentAppoved.publishAfterCommit();
     }
 
     @PostUpdate
     public void onPostUpdate() {
-        if (this.getPayStaus().equals("PayCancel")) {
+        //if (this.getPayStaus().equals("PayCancel")) {
             PaymentCanceled paymentCanceled = new PaymentCanceled();
             BeanUtils.copyProperties(this, paymentCanceled);
             // paymentCanceled.setPayStaus("PaymentCancelled");
             paymentCanceled.publishAfterCommit();
-        }
+        //}
     }
 
     public Long getId() {

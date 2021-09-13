@@ -6,6 +6,10 @@ public class PaymentCanceled extends AbstractEvent {
     private String applyId;
     private String payStaus;
 
+    public PaymentCanceled(){
+        super();
+    }
+
     public Long getId() {
         return id;
     }

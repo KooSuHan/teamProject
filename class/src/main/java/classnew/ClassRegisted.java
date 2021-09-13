@@ -6,12 +6,15 @@ public class ClassRegisted extends AbstractEvent {
     private String studentName;
     private String addr;
     private String telephoneInfo;
-    private String payInfo;
-    private String applyStaus;
+    private String payMethod;
+    private String payAccount;
+    private String applyStatus;
     private Long classId;
+    private Long courseId;
 
     public ClassRegisted(){
         super();
+        System.out.println("------Register Class Start!!----");
     }
 
     public Long getId() {
@@ -42,19 +45,26 @@ public class ClassRegisted extends AbstractEvent {
     public void setTelephoneInfo(String telephoneInfo) {
         this.telephoneInfo = telephoneInfo;
     }
-    public String getPayInfo() {
-        return payInfo;
+    public String getPayMethod() {
+        return payMethod;
     }
 
-    public void setPayInfo(String payInfo) {
-        this.payInfo = payInfo;
+    public void setPayMethod(String payMethod) {
+        this.payMethod = payMethod;
     }
-    public String getApplyStaus() {
-        return applyStaus;
+    public String getPayAccount() {
+        return payAccount;
     }
 
-    public void setApplyStaus(String applyStaus) {
-        this.applyStaus = applyStaus;
+    public void setPayAccount(String payAccount) {
+        this.payAccount = payAccount;
+    }
+    public String getApplyStatus() {
+        return applyStatus;
+    }
+
+    public void setApplyStatus(String applyStatus) {
+        this.applyStatus = applyStatus;
     }
     public Long getClassId() {
         return classId;
@@ -62,5 +72,13 @@ public class ClassRegisted extends AbstractEvent {
 
     public void setClassId(Long classId) {
         this.classId = classId;
+    }
+
+    public Long getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(Long courseId) {
+        this.courseId = courseId;
     }
 }

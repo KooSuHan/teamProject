@@ -30,14 +30,15 @@ public class MypageViewHandler {
             Mypage mypage = new Mypage();
             // view 객체에 이벤트의 Value 를 set 함
             mypage.setApplyId(String.valueOf(classRegisted.getId()));
-            mypage.setClassId(classRegisted.getClassId());
-            mypage.setApplyStaus(classRegisted.getApplyStaus());
+            mypage.setCourseId(String.valueOf(classRegisted.getCourseId()));
+            mypage.setApplyStaus("ApplyFinish");
             mypage.setPayMethod(classRegisted.getPayMethod());
-            mypage.setPayAccount(classRegisted.getPayInfo());
+            mypage.setPayAccount(classRegisted.getPayAccount());
             mypage.setStudentName(classRegisted.getStudentName());
             mypage.setAddr(classRegisted.getAddr());
             mypage.setTelephoneInfo(classRegisted.getTelephoneInfo());
-            mypage.setPayStatus("PayRequest");
+            mypage.setPayStatus("PayFinish");
+            //mypage.setDeliveryStatus("D");
             // view 레파지 토리에 save
             mypageRepository.save(mypage);
 

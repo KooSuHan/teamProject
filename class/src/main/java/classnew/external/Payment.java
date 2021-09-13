@@ -2,25 +2,33 @@ package classnew.external;
 
 public class Payment {
 
-    private Long paymentId;
+    private Long id;
     private String applyId;
+    private String payMethod;
     private String payAccount;
     private String payStaus;
     private String addr;
     private String telephoneInfo;
     private String studentName;
+    private String applyStatus;
 
-    public Long getPaymentId() {
-        return paymentId;
+    public Long getId() {
+        return id;
     }
-    public void setPaymentId(Long paymentId) {
-        this.paymentId = paymentId;
+    public void setId(Long id) {
+        this.id = id;
     }
     public String getApplyId() {
         return applyId;
     }
     public void setApplyId(String applyId) {
         this.applyId = applyId;
+    }
+    public String getPayMethod() {
+        return payMethod;
+    }
+    public void setPayMethod(String payMethod) {
+        this.payMethod = payMethod;
     }
     public String getPayAccount() {
         return payAccount;
@@ -52,5 +60,10 @@ public class Payment {
     public void setStudentName(String studentName) {
         this.studentName = studentName;
     }
-
+    public String getApplyStatus() {
+        return applyStatus;
+    }
+    public void setApplyStatus(String applyStatus) {
+        this.applyStatus = applyStatus;
+    }
 }

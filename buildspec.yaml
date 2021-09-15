@@ -23,12 +23,12 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...
       - mvn package -Dmaven.test.skip=true
-      - docker build -t 879772956301.dkr.ecr.ca-central-1.amazonaws.com/user05-mypage:latest .
+      - docker build -t $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$CODEBUILD_RESOLVED_SOURCE_VERSION  .
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 879772956301.dkr.ecr.ca-central-1.amazonaws.com/user05-mypage:latest
+      - docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/$IMAGE_REPO_NAME:$CODEBUILD_RESOLVED_SOURCE_VERSION
 
 cache:
   paths:

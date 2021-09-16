@@ -8,5 +8,6 @@ import java.util.List;
 public interface MypageRepository extends CrudRepository<Mypage, Long> {
 
     List<Mypage> findByApplyId(String applyId);
-
+     
+    //test
 }

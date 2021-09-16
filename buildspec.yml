@@ -78,7 +78,7 @@ phases:
                       - containerPort: 8080
                     readinessProbe:
                       httpGet:
-                        path: '/deliveries'
+                        path: '/mypages'
                         port: 8080
                       initialDelaySeconds: 20
                       timeoutSeconds: 2
@@ -86,7 +86,7 @@ phases:
                       failureThreshold: 10
                     livenessProbe:
                       httpGet:
-                        path: '/deliveries'
+                        path: '/mypages'
                         port: 8080
                       initialDelaySeconds: 180
                       timeoutSeconds: 2
